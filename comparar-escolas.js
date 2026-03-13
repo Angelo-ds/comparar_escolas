@@ -79,23 +79,21 @@ UnidadeA.fecharEscola()
 UnidadeB.fecharEscola()
 
 /* ===== RELATÓRIO DE COMPARAÇÃO ===== */
-// const compararEscolas = (UnidadeA,UnidadeB) =>{
-//   console.log(`> Comparando oferta de cursos: ${escolaA.cidade} vs ${escolaB.cidade} vs ${escolaC.cidade}...`)
+ const compararEscolas = (UnidadeA,UnidadeB) =>{
+   console.log(`> Comparando oferta de cursos: ${UnidadeA.cidade} vs ${UnidadeB.cidade} ...`)
 
-//   if (escolaA.quantidadedeCursos > escolaB.quantidadedeCursos && escolaA.quantidadedeCursos > escolaC.quantidadedeCursos){
-//       console.log(`Resultado: O SENAI ${escolaA.cidade} possui mais cursos`);
+   if (UnidadeA.qtdeCursos > UnidadeB.qtdeCursos){
+       console.log(`Resultado: O SENAI ${UnidadeA.cidade} possui mais cursos`);
 
-//   } else if (escolaB.quantidadedeCursos > escolaA.quantidadedeCursos && escolaB.quantidadedeCursos > escolaC.quantidadedeCursos){
-//       console.log(`Resultado: O SENAI ${escolaB.cidade} possui mais cursos`);
-//   } else if (escolaC. quantidadedeCursos > escolaA.quantidadedeCursos && escolaC.quantidadedeCursos > escolaB.quantidadedeCursos){
-//       console.log(`Resultado: O SENAI ${escolaC.cidade} possui mais cursos`);
-//   }else{
-//       console.log(`Resultado: Todas as unidades possuem a mesma quantidade de cursos.`);
-//   }
-//   console.log(`Status: ${escolaA.cidade} (${escolaA.quantidadedeCursos}) | ${escolaB.cidade} (${escolaB.quantidadedeCursos}) == \n`);
-// }
+   } else if (UnidadeB.qtdeCursos > UnidadeA.qtdeCursos){
+       console.log(`Resultado: O SENAI ${escolaB.cidade} possui mais cursos`);
+   }else{
+       console.log(`Resultado: Todas as unidades possuem a mesma quantidade de cursos.`);
+   }
+   console.log(`Status: ${UnidadeA.cidade} (${UnidadeA.qtdeCursos}) | ${UnidadeB.cidade} (${UnidadeB.qtdeCursos}) == \n`);
+ }
 
-// compararEscolas(UnidadeA,UnidadeB);
+compararEscolas(UnidadeA,UnidadeB);
 
 /* ===== NOVA CONSULTA ===== */
 
