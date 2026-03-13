@@ -18,7 +18,7 @@ class Senai {
       this.statusFuncionamento = true;
       console.log(`\n== [SISTEMA] O SENAI ${this.cidade} agora está ABERTO. Bem-vindos! ==`);
     }
-  }
+  } 
 
   fecharEscola() {
     if (this.statusFuncionamento == true){
@@ -39,7 +39,7 @@ class Senai {
 
 
 /* ===== OBTER ELEMENTOS ===== */
-const cidadeA = document.querySelectorAll('unidadeA__cidade')
+const cidadeA = document.getElementsByClassName('unidadeA__cidade')
 const codigoA =  document.getElementsByClassName('unidadeA__codigo')
 const anoA =  document.getElementsByClassName('unidadeA__ano')
 const cursosA = document.getElementById('unidadeA__cursos')
@@ -47,15 +47,15 @@ const cursosA = document.getElementById('unidadeA__cursos')
 const cidadeB = document.getElementsByClassName('unidadeB__cidade')
 const codigoB =  document.getElementsByClassName('unidadeB__codigo')
 const anoB =  document.getElementsByClassName('unidadeB__ano')
-const cursosB = document.getElementById('unidadeB__cursos')
+const cursosB = document.querySelectorAll('unidadeB__cursos')
 
-console.log(cursosB)
+
 // const botao_instanciarA = document.getElementsByClassName('unidadeA__instanciar').addEventListener('click',)
 // const botao_abrirA = document.getElementsByClassName('UnidadeA__abrir').addEventListener('click',)
 // const botao_feharA = document.getElementsByClassName('unidadeA__fechar').addEventListener('click',)
 
 
-// const botao_instanciarB = document.getElementsByClassName('unidadeB__instanciar').addEventListener('click',)
+const botao_instanciarB = document.getElementsByClassName('unidadeB__instanciar')
 // const botao_abrirB = document.getElementsByClassName('UnidadeB__abrir').addEventListener('click',)
 // const botao_feharB = document.getElementsByClassName('unidadeB__fechar').addEventListener('click',)
 
@@ -65,11 +65,16 @@ console.log(cursosB)
 
 
 /* ===== INSTANCIAR ESCOLA A ===== */
-const UnidadeA = new Senai(cidadeA,codigoA,anoA,cursosA)
+botao_instanciarB.addEventListener('click', () =>{
+  const UnidadeA = new Senai(cidadeA,codigoA,anoA,cursosA)
+  console.log(UnidadeA)
+})
+
+
 
 /* ===== INSTANCIAR ESCOLA B ===== */
 const UnidadeB = new Senai(cidadeB,codigoB,anoB,cursosB)
-
+console.log(UnidadeB)
 /* ===== ABRIR ESCOLA ===== */
 
 UnidadeA.abrirEscola()
